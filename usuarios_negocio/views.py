@@ -9,6 +9,9 @@ from .forms import UsuarioForm, CustomAuthenticationForm
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login as auth_login
+from rest_framework.permissions import IsAuthenticated
+from rest_framework_simplejwt.authentication import JWTAuthentication
+
 
 def home(request):
     return render(request, 'home.html')
@@ -38,6 +41,8 @@ def panel_usuario(request):
 class UsuarioViewSet(viewsets.ModelViewSet):
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
 
     @action(detail=False, methods=['post'])
     def create_usuario(self, request):

@@ -3,6 +3,10 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import UsuarioViewSet, listar_usuarios,login, agregar_usuario, editar_usuario,eliminar_usuario, home, panel_usuario, logout
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 
 router = DefaultRouter()
 router.register(r'usuarios', UsuarioViewSet)
@@ -10,6 +14,8 @@ router.register(r'usuarios', UsuarioViewSet)
 urlpatterns = [
     path('', home, name='home'),
     path('api/', include(router.urls)),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/usuarios/list_usuarios/', UsuarioViewSet.as_view({'get': 'list_usuarios'}), name='list-usuarios',), # URL para listar usuarios DRF
     path('api/usuarios/create_usuario/', UsuarioViewSet.as_view({'post': 'create_usuario'}), name='create-usuario'), # URL para crear usuarios DRF
     path('api/usuarios/update/<int:pk>/', UsuarioViewSet.as_view({'put': 'update_usuario'}), name='update-usuario'), # URL para editar usuarios DRF
