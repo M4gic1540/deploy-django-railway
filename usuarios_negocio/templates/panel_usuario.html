@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Usuario</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                {% if user.is_authenticated %}
+                <a href="{% url 'home' %}">inicio</a>
+                <a href="{% url 'logout' %}">Cerrar Sesión</a>
+                {% else %}
+                <a href="{% url 'login' %}">Iniciar Sesión</a>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="perfil">
+            <h2>Mi Perfil</h2>
+            <!-- Aquí puedes mostrar y permitir la edición de la información del usuario -->
+        </section>
+
+        <section id="pedidos">
+            <h2>Mis Pedidos</h2>
+            <!-- Aquí puedes mostrar la lista de pedidos del usuario -->
+        </section>
+
+        <section id="configuracion">
+            <h2>Configuración</h2>
+            <!-- Aquí puedes permitir al usuario configurar sus preferencias -->
+        </section>
+    </div>
+</body>
+
+</html>

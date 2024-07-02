@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/styles_home.css' %}">
+{% endblock %}
+
+{% block title %}Inicio{% endblock %}
+
+
+
+{% block content %}
+<section id="banner" class="bg-gray-800 text-white py-12">
+    <div class="text-center">
+        <h1 class="text-4xl font-bold mb-4">Bienvenido a Tu Tienda de Videojuegos</h1>
+        <p class="text-lg mb-8">Explora nuestra amplia colección de videojuegos y encuentra tus favoritos.</p>
+        <a href="#productos" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded">Ver Productos</a>
+    </div>
+</section>
+
+<section id="productos" class="mt-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Aquí puedes listar algunos productos destacados -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="{% static 'img/1_1920x1080.jpg' %}" alt="Producto 1" class="w-full h-64 object-cover">
+            <div class="p-4">
+                <h2 class="text-xl font-bold mb-2">Nombre del Producto 1</h2>
+                <p class="text-gray-700">Descripción corta del producto.</p>
+                <p class="text-lg font-bold mt-2">$49.99</p>
+                <a href="#" class="block mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-center">Comprar Ahora</a>
+            </div>
+        </div>
+        <!-- Repite el bloque para más productos -->
+    </div>
+</section>
+
+<section id="nosotros" class="mt-12">
+    <div class="text-center">
+        <h2 class="text-3xl font-bold mb-4">Nosotros</h2>
+        <p class="text-lg">Breve descripción sobre tu tienda y lo que ofrecen.</p>
+    </div>
+</section>
+
+<section id="contacto" class="mt-12">
+    <div class="text-center">
+        <h2 class="text-3xl font-bold mb-4">Contacto</h2>
+        <p class="text-lg">Información de contacto como dirección, teléfono, correo electrónico, etc.</p>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Usuario</title>
+    <link rel="stylesheet" href="{% static 'css/styles_eliminar.css' %}">
+</head>
+<body>
+    <h1>Eliminar Usuario</h1>
+    <p>¿Está seguro de que desea eliminar el usuario {{ usuario.username }}?</p>
+    <form method="post" action="">
+        {% csrf_token %}
+        <button type="submit">Eliminar Usuario</button>
+        <a href="{% url 'listar-usuarios' %}">Cancelar</a>
+    </form>
+</body>
+</html>

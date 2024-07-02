@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Usuario</title>
+    <link rel="stylesheet" href="{% static 'css/styles_agregar.css' %}">
+</head>
+<body>
+    <h1>Crear Nueva Cuenta</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Registrarse</button>
+    </form>
+    {% if errors %}
+        <ul>
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
