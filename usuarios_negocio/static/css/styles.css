@@ -1,0 +1,38 @@
+/* styles.css */
+
+/* Estilos para los enlaces de acción */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para los botones */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-blue {
+    background-color: #3490dc;
+    color: #fff;
+}
+
+.btn-blue:hover {
+    background-color: #2779bd;
+}
+
+.btn-red {
+    background-color: #e3342f;
+    color: #fff;
+}
+
+.btn-red:hover {
+    background-color: #cc1f1a;
+}
