@@ -135,4 +135,4 @@ AUTH_USER_MODEL = "usuarios_negocio.Usuario"
 
 LOGIN_REDIRECT_URL = 'negocio_usuario/usuarios/panel'
 
-CSRF_TRUSTED_ORIGINS = ['']
+#CSRF_TRUSTED_ORIGINS = ['']
