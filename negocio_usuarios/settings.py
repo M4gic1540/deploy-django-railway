@@ -24,7 +24,7 @@ SECRET_KEY = "django-insecure-ie^awiavv1p*k2-az$(ceyz(z_@eupb9mt^%svclt*07p2t6v1
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['gentle-warmth-django-railway.up.railway.app','localhost']
 
 
 # Application definition
@@ -135,4 +135,4 @@ AUTH_USER_MODEL = "usuarios_negocio.Usuario"
 
 LOGIN_REDIRECT_URL = 'negocio_usuario/usuarios/panel'
 
-CSRF_TRUSTED_ORIGINS = ['https://gentle-warmth-django-railway.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['gentle-warmth-django-railway.up.railway.app']
