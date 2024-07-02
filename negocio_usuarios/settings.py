@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-ie^awiavv1p*k2-az$(ceyz(z_@eupb9mt^%svclt*07p2t6v1
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['gentle-warmth-django-railway.up.railway.app','localhost']
+ALLOWED_HOSTS = ['gentle-warmth-django-railway.up.railway.app','localhost','127.0.0.1']
 
 
 # Application definition
@@ -141,6 +141,14 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
+
+STORAGES = {
+    # ...
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -151,7 +159,7 @@ AUTH_USER_MODEL = "usuarios_negocio.Usuario"
 
 LOGIN_REDIRECT_URL = 'negocio_usuario/usuarios/panel'
 
-CSRF_TRUSTED_ORIGINS = ['https://*.railway.app','https://gentle-warmth-django-railway.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://*.railway.app','https://gentle-warmth-django-railway.up.railway.app','https://*.127.0.0.1']
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
