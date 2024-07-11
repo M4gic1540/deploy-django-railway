@@ -95,7 +95,7 @@ DATABASES = {
         "USER": "root",
         "PASSWORD": "qOjZOJNXbyqSSezufODfJllodJsSEqjh",
         "HOST": "roundhouse.proxy.rlwy.net",
-        "PORT": 56714,
+        "PORT": 38738,
     }
 }
 
