@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-ie^awiavv1p*k2-az$(ceyz(z_@eupb9mt^%svclt*07p2t6v1
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['gentle-warmth-django-railway.up.railway.app','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['*.railway.app','localhost','127.0.0.1']
 
 
 # Application definition
@@ -93,7 +93,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "railway",
         "USER": "root",
-        "PASSWORD": "HdMQWHXykKqEEptQqtkdrAjtcPMuukVz",
+        "PASSWORD": "qOjZOJNXbyqSSezufODfJllodJsSEqjh",
         "HOST": "roundhouse.proxy.rlwy.net",
         "PORT": 56714,
     }
